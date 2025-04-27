@@ -33,7 +33,7 @@ def partial_search(neighborhoods, search_name):
     matches = []
     for record in neighborhoods:
         record_words = record.strip().split()
-        neighborhood_name = ' '.join(record_words[:2])
+        neighborhood_name = ' '.join(record_words[:3])
         if turkish_normalize(search_name) in turkish_normalize(neighborhood_name):
             matches.append(record)
     return matches
